@@ -1,4 +1,4 @@
-package cal1;
+package calculator;
  import java.util.Stack;
 
 import com.sun.javafx.cursor.CursorFrame;
@@ -71,9 +71,9 @@ import javafx.scene.layout.GridPane;
 	     Button btb1 = new Button   ("(");
 	     Button btb2 = new Button   (")");
 	     Button btsquar = new Button("x^2");
-	     Button btentr = new Button ("←");
-	     Button btsqrt = new Button ("√");
-	     Button btdel = new Button  ("∆");
+	     Button btentr = new Button ("â†گ");
+	     Button btsqrt = new Button ("âˆڑ");
+	     Button btdel = new Button  ("âˆ†");
 	     Button btprecent = new Button  ("n%");
 	     
 	     
@@ -382,7 +382,7 @@ import javafx.scene.layout.GridPane;
 	     });
 	     
 	     btsqrt.setOnAction(e->{
-	    	  s="√"; ss.push(s);
+	    	  s="âˆڑ"; ss.push(s);
 	    	 all=all.concat(s);
 	    	 taNote.setText(all);
 	     });
@@ -445,7 +445,38 @@ import javafx.scene.layout.GridPane;
 		  primaryStage.show(); 
 		 
 	 }
-	
+	 public static boolean is_symbol(char c)
+	 {
+		 switch (c) {
+		case '+':
+			return true;
+		case '-':
+			return true;
+
+        case '*':
+        	return true;
+        case '/':
+        	return true;
+        case '%':
+        	return true;
+       case 'âˆڑ':
+    	   return true;
+    	   
+      /* case 's':
+    	   return true;
+    	   
+       case 't':
+    	   return true;
+    	   
+       case 'c':
+    	   return true;*/
+    	   
+       case '^':
+    	   return true;
+        default:
+        	return false;
+		}
+	 }
 	 
 	 public static void main(String[] args){
 		  Application.launch(args);
